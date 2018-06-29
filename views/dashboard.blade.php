@@ -6,14 +6,14 @@
         <div class="left"></div>
         <div class="right">
             <span class="count_top"><i class="fa fa-user"></i> Online streams</span>
-            <div class="count">{{ $online }}</div>
+            <div class="count green">{{ $online }}</div>
         </div>
     </div>
     <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count" onclick="document.location = 'streams.php?running=2'"  style="cursor:pointer">
         <div class="left"></div>
         <div class="right">
             <span class="count_top"><i class="fa fa-clock-o"></i> Offline streams</span>
-            <div class="count">{{ $offline }}</div>
+            <div class="count red">{{ $offline }}</div>
         </div>
     </div>
     <div class="animated flipInY col-md-4 col-sm-4 col-xs-4 tile_stats_count" onclick="document.location = 'streams.php'"  style="cursor:pointer">
