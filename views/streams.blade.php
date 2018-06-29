@@ -96,7 +96,15 @@
                                         </td>
 										<td>
                                             @if($stream->updated_at)
-                                                {{ $stream->updated_at }}
+                                             <?php
+											 $streams_time = strtotime($stream->updated_at . " UTC");
+											 $time_now = $hora_actual = time();
+											 $segundos=$time_now-$streams_time;
+										     $horas = floor($segundos/ 3600);
+	                                         $minutos = floor(($segundos - ($horas * 3600)) / 60);
+	                                         $segundos = $segundos - ($horas * 3600) - ($minutos * 60);
+	                                         echo $horas . ':' . $minutos . ":" . $segundos;									
+                                             ?>
                                             @else
                                                 Empty
                                             @endif
