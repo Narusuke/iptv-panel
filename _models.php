@@ -48,11 +48,11 @@ class Stream extends Illuminate\Database\Eloquent\Model {
     {
         $return = [];
         $return['label'] = 'danger';
-        $return['text'] = 'STOPPED';
+        $return['text'] = 'INACTIVO';
 
         if ($this->status == '1') {
             $return['label'] = 'success';
-            $return['text'] = 'RUNNING';
+            $return['text'] = 'ACTIVO';
         } else if ($this->status == '2') {
             $return['label'] = 'danger';
             $return['text'] = 'ERROR';
